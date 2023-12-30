@@ -1,0 +1,143 @@
+
+2 Design and build the front end part of Online Movie Ticket Reservation System using REACT JS with all essential components and additional features of your choice.
+With coding
+
+
+
+// App.js - Main component
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './components/Home';
+import MovieList from './components/MovieList';
+import MovieDetails from './components/MovieDetails';
+import SeatSelection from './components/SeatSelection';
+import BookingSummary from './components/BookingSummary';
+import Payment from './components/Payment';
+
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/movies" component={MovieList} />
+        <Route path="/movie/:id" component={MovieDetails} />
+        <Route path="/seat-selection/:id" component={SeatSelection} />
+        <Route path="/booking-summary" component={BookingSummary} />
+        <Route path="/payment" component={Payment} />
+      </Switch>
+    </Router>
+  );
+}
+
+export default App;
+ 
+
+
+// Home.js - Home component
+
+import React from 'react';
+
+function Home() {
+  return (
+    <div>
+      <h1>Welcome to Movie Ticket Reservation System</h1>
+      {/* Add links to navigate to different sections of the application */}
+    </div>
+  );
+}
+
+export default Home;
+
+
+// MovieList.js - Movie List component
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+function MovieList() {
+  // Fetch and display a list of available movies
+
+  return (
+    <div>
+      <h2>Movie List</h2>
+      {/* Display a list of movies with links to their details */}
+    </div>
+  );
+}
+
+export default MovieList;
+
+
+// MovieDetails.js - Movie Details component
+
+import React from 'react';
+
+function MovieDetails() {
+  // Fetch and display detailed information about a specific movie
+
+  return (
+    <div>
+      <h2>Movie Details</h2>
+      {/* Display movie details and a link to proceed to seat selection */}
+    </div>
+  );
+}
+
+export default MovieDetails;
+
+
+// SeatSelection.js - Seat Selection component
+
+import React from 'react';
+
+function SeatSelection() {
+  // Allow users to select seats for the chosen movie
+
+  return (
+    <div>
+      <h2>Seat Selection</h2>
+      {/* Display seat selection interface */}
+    </div>
+  );
+}
+
+export default SeatSelection;
+
+
+// BookingSummary.js - Booking Summary component
+
+import React from 'react';
+
+function BookingSummary() {
+  // Display a summary of the user's booking before proceeding to payment
+
+  return (
+    <div>
+      <h2>Booking Summary</h2>
+      {/* Display booking details and a link to proceed to payment */}
+    </div>
+  );
+}
+
+export default BookingSummary;
+
+
+// Payment.js - Payment component
+
+import React from 'react';
+
+function Payment() {
+  // Allow users to make payment for their booking
+
+  return (
+    <div>
+      <h2>Payment</h2>
+      {/* Display payment form and handle payment processing */}
+    </div>
+  );
+}
+
+export default Payment;
+
+
